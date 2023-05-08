@@ -19,27 +19,27 @@ export_include_dirs:
 
 sources:
 # Level 0:
-- src/snitch_pma_pkg.sv
-- src/riscv_instr.sv
+- rtl/src/snitch_pma_pkg.sv
+- rtl/src/riscv_instr.sv
 # Level 1:
-- src/snitch_pkg.sv
+- rtl/src/snitch_pkg.sv
 # Level 2:
-- src/snitch_regfile_ff.sv
+- rtl/src/snitch_regfile_ff.sv
 # - src/snitch_regfile_fpga.sv
 # - src/snitch_regfile_latch.sv
-- src/snitch_lsu.sv
-- src/snitch_l0_tlb.sv
+- rtl/src/snitch_lsu.sv
+- rtl/src/snitch_l0_tlb.sv
 # Level 1:
 - target: not(disable_pmcs)
   defines:
     SNITCH_ENABLE_PERF:
   files:
-  - src/snitch.sv
+  - rtl/src/snitch.sv
 # Disable the performance monitoring counters to save area.
 - target: disable_pmcs
   files:
-  - src/snitch.sv
+  - rtl/src/snitch.sv
 
 - target: test
   files:
-  - test/snitch_l0_tlb_tb.sv
+  - rtl/test/snitch_l0_tlb_tb.sv
