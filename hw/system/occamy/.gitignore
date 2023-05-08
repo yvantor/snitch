@@ -1,8 +1,0 @@
-*.dot
-addrmap/*.png
-novasLog
-verdiLog
-novas.*
-*.fsdb*
-.vcs_checkpoint_shared_memory.*
-logs
